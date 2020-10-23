@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> JQM </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+  </head>
+
+
+<script>
+
+
+
+
+</script>
+
+<body>
+
+    Hello World jQuery mobile !!
+    
+	<div data-role="page" id="pag1">
+      <div data-role="header">
+        <h1>Um objeto qualquer</h1>
+      </div>
+
+      <div data-role="content">
+        <p>Página de um objeto qualquer</p>
+        <a href="#confirmeDelete" data-role="button" data-rel="dialog">Apagar</a>
+      </div>
+	</div>
+
+	<div data-role="page" id="confirmeDelete">
+	  <div data-role="header">
+		<h1>Confirmação</h1>
+	  </div>
+
+	  <div data-role="content">
+		<p>Tem certeza?</p>
+		  <a href="#deletar" data-role="button">Sim</a>
+		  <a href="#" data-role="button" data-rel="back">Não</a>
+	  </div>
+	</div>
+
+	<div data-role="page" id="deletar">
+	  <div data-role="header">
+		<h1>Foi...</h1>
+	  </div>
+
+	  <div data-role="content">
+		<p>Apagado com sucesso!</p>
+	  </div>
+	</div>
+
+
+</body>
+
+</html>

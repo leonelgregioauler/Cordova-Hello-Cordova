@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> JQM </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script>
+    $(document).on("mobileinit", function() {
+		  console.log("mobileinit");
+		  $.mobile.page.prototype.options.theme = "b";
+		});
+  </script>
+  
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+</head>
+<body>
+
+    <div data-role="page">
+      <div data-role="header">
+        <h1>Lista Simples</h1>
+      </div>
+	  
+	  <h1 id="orientation">orientationchange Not Supported on this Device.</h1>
+	
+	  <script>
+
+		$( window ).on( "orientationchange", function( event ) { 
+		$( "#orientation" ).text( "This device is in " + event.orientation + " mode!" );
+		
+		});
+
+	  </script>
+	  
+	  <!-- Listas -->
+      <div data-role="content">
+        <ul data-role="listview" data-filter="true" data-inset="true">
+            <li>Leonel</li>
+            <li>Camila</li>
+            <li>Alice</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+      </div>
+	  
+	  <!-- Listas com Tópicos -->
+	  <div data-role="header">
+        <h1>Lista com Tópicos</h1>
+      </div>
+	  
+	  <div data-role="content">
+        <ul data-role="listview" data-filter="true" data-inset="true">
+            <li data-role="list-divider">Sudeste</li>
+			<li>Minas Gerais</li>
+			<li>São Paulo</li>
+			<li>Rio de Janeiro</li>
+			<li>Espírito Santo</li>
+			<li data-role="list-divider">Sul</li>
+			<li>Paraná</li>
+			<li>Santa Catarina</li>
+			<li>Rio Grande do Sul</li>
+			<li data-role="list-divider">Centro-Oeste</li>
+			<li>Mato Grosso</li>
+			<li>Goiás</li>
+			<li>Mato Grosso do Sul</li>
+			<li data-role="list-divider">Nordeste</li>
+			<li>Bahia</li>
+			<li>Sergipe</li>
+			<li>....</li>
+			<li>Maranhão</li>
+			<li data-role="list-divider">Norte</li>
+			<li>Amazonas</li>
+			<li>Acre</li>
+			<li>Pará</li>
+			<li>Amapá</li>
+			<li>Roraima</li>
+			<li>Tocantins</li>
+        </ul>
+      </div>
+	 
+      <!-- Listas com Textos Extras -->	 
+	  <div data-role="header">
+        <h1>Lista com Textos Extras</h1>
+      </div>
+	  
+	  <ul data-role="listview" data-filter="true" data-inset="true">
+        <li data-role="list-divider">Sudeste
+          <span class="ui-li-count">4</span>
+        </li>
+		  <li>Minas Gerais</li>
+		  <li>São Paulo</li>
+		  <li>Rio de Janeiro</li>
+		  <li>Espírito Santo</li>
+      </ul>
+	  
+	  <!-- Listas com Textos dentro do Item -->
+	  <div data-role="header">
+        <h1>Lista com Texto dentro do Item</h1>
+      </div>
+	  
+	  <ul data-role="listview" data-filter="true" data-inset="true" data-theme="a">
+        <li data-role="list-divider">Sudeste
+          <span class="ui-li-count">4</span>
+        </li>
+        <li>
+          <h3>Minas Gerais</h3>
+		  <p class="ui-li-aside">Capital: Belo Horizonte</p>
+          <p>População: X.XXX.XXX</p>
+		</li>
+		<li>
+			<h3>São Paulo</h3>
+			<p>População: xx.xxx.xxx</p>
+	    </li>
+		<li>
+          <h3>Rio de Janeiro</h3>
+          <p class="ui-li-aside">Capital: Rio de Janeiro</p>
+		  <p>População: X.XXX.XXX</p>
+		</li>
+	  </ul>
+		
+	  
+    </div>
+	
+	
+
+</body>
+
+</html>

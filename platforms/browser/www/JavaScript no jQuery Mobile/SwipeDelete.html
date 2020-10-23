@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> JQM </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script>
+  
+     $(document).on("mobileinit", function() {
+		  console.log("mobileinit");
+		  $.mobile.page.prototype.options.theme = "b";
+		  $.event.special.swipe.scrollSupressionThreshold = 10;      // pixels de altura que o mouse / dedo pode ir na diagonal. (evita traçar na diagonal)
+		  $.event.special.swipe.durationThreshold = 150;             // tempo que deve arrastar para conseguir executar a funcionalidade. (tempo para o evento ser válido)
+		  $.event.special.swipe.horizontalDistanceThreshold = 50;    // distância que o mouse / dedo deve percorrer antes do tempo acabar (durationThreshold)  . 
+		  $.event.special.swipe.verticalDistanceThreshold = 50;      // distância que o mouse / dedo deve percorrer antes do tempo acabar (durationThreshold)  .
+		  
+		  //$("#pagina1").pagecontainer();
+		  //$("#list").pagecontainer();
+		  
+		  $("#pagina1").pagecontainer("change", "nova_pagina.html");
+		});
+
+  
+  </script>
+  
+  
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+</head>
+<body id="pagina1">
+
+    <div data-role="page">
+    <div data-role="header">
+      <h1> Exemplo Swipe Delete </h1>
+    </div>
+    
+    <div role="main" class="ui-content">
+      
+      <ul id="list" data-role="listview">
+        <li >
+          <span>Banana</span>
+        </li>
+        <li >
+          <span>Maçã</span>
+        </li>
+        <li>
+          <span >Pera</span>
+        </li>
+        <li >
+          <span >Laranja</span>
+        </li>
+        <li >
+          <span >Morango</span>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  
+  <script>
+  
+    
+	$("#list").on("swiperight",">li",function(event){
+      var li = $(this);
+      var span = li.children();
+      console.log("Excluindo " + span.html());
+          
+      $(this).animate({marginLeft: parseInt($(this).css('marginLeft'),10) === 0 ? $(this).outerWidth() : 0 }).fadeOut('fast',function(){li.remove()});
+          
+    });
+
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> JQM </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+  </head>
+
+
+<script>
+
+
+
+
+</script>
+
+<body>
+
+    Hello World jQuery mobile !!
+    <!--
+	<div data-role="page" id="pag1">
+	  <div data-role="header">Titulo 1</div>
+	  <div data-role="content">Conteúdo Página 1</div>
+	  <div data-role="footer">Rodapé</div>
+	</div>
+ 	  
+    <div data-role="page" id="pag2">
+	  <div data-role="header">Titulo 2</div>
+	  <div data-role="content">Conteúdo Página 2</div>
+	  <div data-role="footer">Rodapé</div>
+	</div>
+	
+    <div data-role="page" id="pag3">
+	  <div data-role="header">Titulo 3</div>
+	  <div data-role="content">Conteúdo Página 3</div>
+	  <div data-role="footer">Rodapé</div>
+	</div>
+	-->
+	
+	<div data-role="page" id="pag1">
+      <div data-role="header">
+        <h1>Página 1</h1>
+      </div>
+      
+	  <div data-role="content">
+        <ul data-role="listview">
+          <li><a href="#pag2" data-transition="flip">Página 2</a>
+          </li>
+          <li><a href="#pag3" data-transition="slide">Página 3</a>
+          </li>
+          <li><a href="paginas.html">Página Padrão</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+	<div data-role="page" id="pag2">
+      <div data-role="header">
+        <a href="#pag1" data-role="button" 
+          data-direction="reverse">Voltar</a>
+        <h1>Página 2</h1>
+      </div>
+      <div data-role="content">
+        <p>Esta é a página 2</p>
+      </div>
+    </div>
+    
+	<div data-role="page" id="pag3">
+      <div data-role="header">
+        <a href="#pag1" data-role="button" 
+          data-direction="reverse">Voltar</a>
+        <h1>Página 3</h1>
+      </div>
+      <div data-role="content">
+        <p>Esta é a página 3</p>
+      </div>
+    </div>
+		
+
+	
+	
+
+
+</body>
+
+</html>
